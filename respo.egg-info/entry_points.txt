@@ -1,4 +1,0 @@
-[console_scripts]
-respo = respo.cli:main
-respo-server = respo.api.app:run_server
-respo-ui = respo.ui.dashboard:create_app
