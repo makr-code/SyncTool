@@ -1,0 +1,40 @@
+openapi: "3.1.0"
+info:
+  title: Python Service Template
+  version: "0.1.0"
+  description: |
+    Minimales FastAPI OpenAPI-Template.
+    Ersetze title, version und paths durch deine eigenen Definitionen.
+    Generiere die finale Spec mit: python -c "import json; from app.main import app; print(json.dumps(app.openapi(), indent=2))"
+
+servers:
+  - url: http://localhost:8080
+    description: Local development
+
+paths:
+  /health:
+    get:
+      summary: Health Check
+      operationId: health_check
+      responses:
+        "200":
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          enum: [ok]
+          example: ok
+        version:
+          type: string
+          example: "0.1.0"

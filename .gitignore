@@ -1,0 +1,49 @@
+# Build artifacts (legacy C++)
+/build/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Linter / formatter
+.ruff_cache/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# AI working area — temporäre Agenten-Artefakte (nicht committen)
+ai_working/plans/*.md
+ai_working/debug/*.md
+ai_working/notes/*.md
+
+# Raw sources — große Binär- und Mediendateien nicht committen (Text-Quellen sind OK)
+raw/**/*.pdf
+raw/**/*.epub
+raw/assets/*.png
+raw/assets/*.jpg
+raw/assets/*.jpeg
+raw/assets/*.gif
+raw/assets/*.mp3
+raw/assets/*.mp4
